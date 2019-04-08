@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid text-center">
+            <h1>Hangman Seattle
+                <br>
+                <small>Let's guess the names of some Seattle neighborhoods</small>
+            </h1>
+        </div>
+
+        <div class="row center-block match-my-cols">
+            <div class="col-xs-12 col-md-7 text-center left">
+                <h2 id="letsPlay">Press any key to start.</h2>
+                <h3>Current Word</h3>
+                <div id="currentWord"></div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <h3>Letters Guessed:</h3>
+                        <div id="lettersGuessed">--</div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <h3>Guesses Left:</h3>
+                        <div id="guessesLeft">--</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <h3>Number of Wins:</h3>
+                        <div id="wins">0</div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <h3>Number of Losses:</h3>
+                        <div id="losses">0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4 right">
+                <img class="center-block" src="assets/images/seattle_skyline.jpg" alt="seattle skyline" width="100px"
+                    height="280px">
+            </div>
+        </div>
+    </div>
+</body>
+<footer class="site-footer">
+    Copyright 2019 Sam Cotter
+</footer>
+
+</html>

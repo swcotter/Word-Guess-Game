@@ -1,0 +1,56 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    color: #444444;
+    background-image: url("../images/palm-leaf.png");
+    background-color: #cccccc;
+}
+
+.jumbotron{
+    background-color: #3b68ca;
+    color: #e4e0e0;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 1%;
+    padding-top: .5%;
+    padding-bottom: 2%;
+}
+
+@media screen and (max-width: 767px){
+    img{
+        width: 50% !important;
+    }
+    .left{
+        padding-top: 20px;
+    }
+}
+
+h2{
+    font-family: 'Ubuntu', sans-serif;
+    color: #888888;
+}
+
+img{
+    border-radius: 6px;
+    width: auto;
+}
+
+#currentWord, #guessesLeft, #lettersGuessed, #wins, #losses{
+    font-size: 24px;
+}
+
+.left{
+    background-color: #d5d9e0;
+    border-radius: 6px;
+}
+
+.right{
+    padding-right: 0;
+}
+
+.row{
+    border-radius: 6px;
+}
+
+.row.match-my-cols {
+    overflow: hidden;
+}
+
