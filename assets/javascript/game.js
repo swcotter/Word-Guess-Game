@@ -1,6 +1,6 @@
-var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
-var neighborhoods = ["magnolia","queenanne","ballard","belltown","sandpoint","wallingford","madisonpark", "beaconhill", "rainiervalley", "sewardpark", "georgetown", "delridge"]
+var neighborhoods = ["magnolia","queenanne","ballard","belltown","sandpoint","wallingford","madisonpark", "beaconhill", "rainiervalley", "sewardpark", "georgetown", "delridge"];
 
 var gameStarted = false;
 var currentWord;
@@ -21,8 +21,9 @@ function initialize() {
     correctGuesses = 0;
     wordPlace = Math.floor(Math.random() * 12);
     currentWord = neighborhoods [wordPlace];  //string
-    guessesLeft = 13 //longer words get less guesses
+    guessesLeft = 13; //longer words get less guesses
     wordAsDashes = makeIntoDashes(currentWord); //string of dashes
+    console.log(wordAsDashes);
     wordAsArr = currentWord.split(''); //array with letters
     dashesArray = wordAsDashes.split(''); //array with dashes
     document.getElementById("currentWord").innerHTML = wordAsDashes;
@@ -33,10 +34,12 @@ function initialize() {
 // Make each word into underscores, like hangman
 function makeIntoDashes(word) {
     var dashes = "";
+    var i;
     for (i = 0; i < word.length - 1; i++) {
         dashes += "_";
     }
     dashes += "_";
+    console.log(dashes.length);
     return dashes;
 }
 
@@ -73,10 +76,11 @@ function playGame(letter) {
 //Displays letter if it's in the selected word
 function displayLetter(letter) {
     //for each character in wordAsDashes, if it matches cuurentWord
-    for (i = 0; i < currentWord.length; i++) {
+    for (var i = 0; i < currentWord.length; i++) {
         if (letter == wordAsArr[i]) {
             dashesArray[i * 2] = letter;
             console.log(dashesArray);
+            letter[i]=wordAsArr
         }
     }
     document.getElementById("currentWord").innerHTML = dashesArray.join("");
@@ -104,4 +108,4 @@ document.onkeyup = function (event) {
     else {
         playGame(event.key);
     }
-}
+};
